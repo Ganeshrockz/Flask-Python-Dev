@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>STUDENT REGISTRATION</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+.perfect-centering {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+</style>
+<script>
+function fn()
+{
+  window.location = "/form";
+}
+</script>
+<body>
+  <div class="container">
+
+  <form class="form-group perfect-centering" action="/" method="post">
+    <div class="well well-lg">
+    <label><strong>Username:</strong></label><br>
+    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Username" required></input>
+    <br>
+    <label><strong>Password:</strong></label><br>
+    <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required></input>
+    <br>
+    {% if err =="Login Failed" %}
+    <center><strong><span style="color: red">Login Failed</span></strong></center>
+    {% set err="Success" %}
+    {% endif %}
+    <button type="submit" class="btn btn-md form-control btn-danger">Login</button>
+</form>
+    <button class="btn btn-md form-control btn-success" onclick="fn()">StudentRegistration Form</button>
+  </div>
+    </div>
+</body>
+</html>

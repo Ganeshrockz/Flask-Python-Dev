@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>STUDENT REGISTRATION</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+<tr>
+        <th>RollNumber</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Year</th>
+        <th>Skills</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+    </tr>
+        </thead>
+        <tbody>
+          {% for data in studentdata %}
+          <tr>
+          <td>{{data.Rollnumber}}</td>
+          <td>{{data.StudentName}}</td>
+          <td>{{data.Address}}</td>
+          <td>{{data.Year}}</td>
+          <td>{{data.Skills}}</td>
+          <td>{{data.PhoneNumber}}</td>
+          <td>{{data.EmailId}}</td>
+        </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back</a>
+</div>
+</body>
+</html>
